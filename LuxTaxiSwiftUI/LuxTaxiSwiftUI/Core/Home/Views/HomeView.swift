@@ -8,9 +8,20 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @StateObject var viewModel = HomeViewModel()
+    
     var body: some View {
-        MapViewRepresentable()
-            .ignoresSafeArea()
+        ZStack(alignment: .top){
+            MapViewRepresentable()
+                .ignoresSafeArea()
+            
+            MapViewMenuButton()
+            
+            LocationSearchBoxView(searchLocation: $viewModel.searchLocationText)
+        }
+        .background(Color.theme.appBackgroundColor)
+        
     }
 }
 

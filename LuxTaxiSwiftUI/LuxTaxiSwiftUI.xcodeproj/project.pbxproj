@@ -16,6 +16,11 @@
 		AF37CBF128E344B300DF0182 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF37CBF028E344B300DF0182 /* HomeView.swift */; };
 		AF37CBF328E3453300DF0182 /* MapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF37CBF228E3453300DF0182 /* MapViewRepresentable.swift */; };
 		AF37CBF528E347A200DF0182 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF37CBF428E347A200DF0182 /* LocationManager.swift */; };
+		AF37CBFB28E3530A00DF0182 /* LocationSearchBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF37CBFA28E3530900DF0182 /* LocationSearchBoxView.swift */; };
+		AF37CBFD28E3538800DF0182 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF37CBFC28E3538800DF0182 /* Color.swift */; };
+		AF37CBFF28E3551F00DF0182 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF37CBFE28E3551F00DF0182 /* UIApplication.swift */; };
+		AF8F826228E3596F009AC943 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F826128E3596F009AC943 /* HomeViewModel.swift */; };
+		AF8F826428E35A44009AC943 /* MapViewMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F826328E35A44009AC943 /* MapViewMenuButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +53,11 @@
 		AF37CBF028E344B300DF0182 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		AF37CBF228E3453300DF0182 /* MapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewRepresentable.swift; sourceTree = "<group>"; };
 		AF37CBF428E347A200DF0182 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		AF37CBFA28E3530900DF0182 /* LocationSearchBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchBoxView.swift; sourceTree = "<group>"; };
+		AF37CBFC28E3538800DF0182 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		AF37CBFE28E3551F00DF0182 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		AF8F826128E3596F009AC943 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		AF8F826328E35A44009AC943 /* MapViewMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewMenuButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +155,7 @@
 		AF37CBEA28E3442200DF0182 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				AF37CBF728E3528A00DF0182 /* LocationSearch */,
 				AF37CBF628E34E5200DF0182 /* Home */,
 			);
 			path = Core;
@@ -153,6 +164,8 @@
 		AF37CBEB28E3442800DF0182 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				AF37CBFC28E3538800DF0182 /* Color.swift */,
+				AF37CBFE28E3551F00DF0182 /* UIApplication.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -177,6 +190,7 @@
 			children = (
 				AF37CBF028E344B300DF0182 /* HomeView.swift */,
 				AF37CBF228E3453300DF0182 /* MapViewRepresentable.swift */,
+				AF8F826328E35A44009AC943 /* MapViewMenuButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -184,6 +198,7 @@
 		AF37CBEF28E3449C00DF0182 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				AF8F826128E3596F009AC943 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -195,6 +210,30 @@
 				AF37CBEE28E3449600DF0182 /* Views */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		AF37CBF728E3528A00DF0182 /* LocationSearch */ = {
+			isa = PBXGroup;
+			children = (
+				AF37CBF928E352A200DF0182 /* ViewModel */,
+				AF37CBF828E3529B00DF0182 /* Views */,
+			);
+			path = LocationSearch;
+			sourceTree = "<group>";
+		};
+		AF37CBF828E3529B00DF0182 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AF37CBFA28E3530900DF0182 /* LocationSearchBoxView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AF37CBF928E352A200DF0182 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,9 +367,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF37CBF528E347A200DF0182 /* LocationManager.swift in Sources */,
+				AF37CBFF28E3551F00DF0182 /* UIApplication.swift in Sources */,
 				AF37CBC028E33EE700DF0182 /* LuxTaxiSwiftUIApp.swift in Sources */,
+				AF8F826228E3596F009AC943 /* HomeViewModel.swift in Sources */,
+				AF8F826428E35A44009AC943 /* MapViewMenuButton.swift in Sources */,
 				AF37CBF328E3453300DF0182 /* MapViewRepresentable.swift in Sources */,
 				AF37CBF128E344B300DF0182 /* HomeView.swift in Sources */,
+				AF37CBFB28E3530A00DF0182 /* LocationSearchBoxView.swift in Sources */,
+				AF37CBFD28E3538800DF0182 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
