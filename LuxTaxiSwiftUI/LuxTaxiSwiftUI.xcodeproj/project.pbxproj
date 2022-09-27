@@ -1,0 +1,660 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF37CBC028E33EE700DF0182 /* LuxTaxiSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF37CBBF28E33EE700DF0182 /* LuxTaxiSwiftUIApp.swift */; };
+		AF37CBC428E33EE900DF0182 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF37CBC328E33EE900DF0182 /* Assets.xcassets */; };
+		AF37CBC728E33EE900DF0182 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF37CBC628E33EE900DF0182 /* Preview Assets.xcassets */; };
+		AF37CBD128E33EE900DF0182 /* LuxTaxiSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF37CBD028E33EE900DF0182 /* LuxTaxiSwiftUITests.swift */; };
+		AF37CBDB28E33EE900DF0182 /* LuxTaxiSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF37CBDA28E33EE900DF0182 /* LuxTaxiSwiftUIUITests.swift */; };
+		AF37CBDD28E33EE900DF0182 /* LuxTaxiSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF37CBDC28E33EE900DF0182 /* LuxTaxiSwiftUIUITestsLaunchTests.swift */; };
+		AF37CBF128E344B300DF0182 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF37CBF028E344B300DF0182 /* HomeView.swift */; };
+		AF37CBF328E3453300DF0182 /* MapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF37CBF228E3453300DF0182 /* MapViewRepresentable.swift */; };
+		AF37CBF528E347A200DF0182 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF37CBF428E347A200DF0182 /* LocationManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF37CBCD28E33EE900DF0182 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF37CBB428E33EE700DF0182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF37CBBB28E33EE700DF0182;
+			remoteInfo = LuxTaxiSwiftUI;
+		};
+		AF37CBD728E33EE900DF0182 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF37CBB428E33EE700DF0182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF37CBBB28E33EE700DF0182;
+			remoteInfo = LuxTaxiSwiftUI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AF37CBBC28E33EE700DF0182 /* LuxTaxiSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuxTaxiSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF37CBBF28E33EE700DF0182 /* LuxTaxiSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuxTaxiSwiftUIApp.swift; sourceTree = "<group>"; };
+		AF37CBC328E33EE900DF0182 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF37CBC628E33EE900DF0182 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AF37CBCC28E33EE900DF0182 /* LuxTaxiSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LuxTaxiSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF37CBD028E33EE900DF0182 /* LuxTaxiSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuxTaxiSwiftUITests.swift; sourceTree = "<group>"; };
+		AF37CBD628E33EE900DF0182 /* LuxTaxiSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LuxTaxiSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF37CBDA28E33EE900DF0182 /* LuxTaxiSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuxTaxiSwiftUIUITests.swift; sourceTree = "<group>"; };
+		AF37CBDC28E33EE900DF0182 /* LuxTaxiSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuxTaxiSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AF37CBF028E344B300DF0182 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		AF37CBF228E3453300DF0182 /* MapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewRepresentable.swift; sourceTree = "<group>"; };
+		AF37CBF428E347A200DF0182 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF37CBB928E33EE700DF0182 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF37CBC928E33EE900DF0182 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF37CBD328E33EE900DF0182 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF37CBB328E33EE700DF0182 = {
+			isa = PBXGroup;
+			children = (
+				AF37CBBE28E33EE700DF0182 /* LuxTaxiSwiftUI */,
+				AF37CBCF28E33EE900DF0182 /* LuxTaxiSwiftUITests */,
+				AF37CBD928E33EE900DF0182 /* LuxTaxiSwiftUIUITests */,
+				AF37CBBD28E33EE700DF0182 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AF37CBBD28E33EE700DF0182 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF37CBBC28E33EE700DF0182 /* LuxTaxiSwiftUI.app */,
+				AF37CBCC28E33EE900DF0182 /* LuxTaxiSwiftUITests.xctest */,
+				AF37CBD628E33EE900DF0182 /* LuxTaxiSwiftUIUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF37CBBE28E33EE700DF0182 /* LuxTaxiSwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				AF37CBEC28E3443500DF0182 /* Utils */,
+				AF37CBEB28E3442800DF0182 /* Extensions */,
+				AF37CBED28E3444200DF0182 /* Models */,
+				AF37CBEA28E3442200DF0182 /* Core */,
+				AF37CBE928E3441000DF0182 /* App */,
+				AF37CBC328E33EE900DF0182 /* Assets.xcassets */,
+				AF37CBC528E33EE900DF0182 /* Preview Content */,
+			);
+			path = LuxTaxiSwiftUI;
+			sourceTree = "<group>";
+		};
+		AF37CBC528E33EE900DF0182 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				AF37CBC628E33EE900DF0182 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AF37CBCF28E33EE900DF0182 /* LuxTaxiSwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AF37CBD028E33EE900DF0182 /* LuxTaxiSwiftUITests.swift */,
+			);
+			path = LuxTaxiSwiftUITests;
+			sourceTree = "<group>";
+		};
+		AF37CBD928E33EE900DF0182 /* LuxTaxiSwiftUIUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AF37CBDA28E33EE900DF0182 /* LuxTaxiSwiftUIUITests.swift */,
+				AF37CBDC28E33EE900DF0182 /* LuxTaxiSwiftUIUITestsLaunchTests.swift */,
+			);
+			path = LuxTaxiSwiftUIUITests;
+			sourceTree = "<group>";
+		};
+		AF37CBE928E3441000DF0182 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AF37CBBF28E33EE700DF0182 /* LuxTaxiSwiftUIApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		AF37CBEA28E3442200DF0182 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				AF37CBF628E34E5200DF0182 /* Home */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		AF37CBEB28E3442800DF0182 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AF37CBEC28E3443500DF0182 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AF37CBF428E347A200DF0182 /* LocationManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		AF37CBED28E3444200DF0182 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AF37CBEE28E3449600DF0182 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AF37CBF028E344B300DF0182 /* HomeView.swift */,
+				AF37CBF228E3453300DF0182 /* MapViewRepresentable.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AF37CBEF28E3449C00DF0182 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AF37CBF628E34E5200DF0182 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				AF37CBEF28E3449C00DF0182 /* ViewModel */,
+				AF37CBEE28E3449600DF0182 /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF37CBBB28E33EE700DF0182 /* LuxTaxiSwiftUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF37CBE028E33EE900DF0182 /* Build configuration list for PBXNativeTarget "LuxTaxiSwiftUI" */;
+			buildPhases = (
+				AF37CBB828E33EE700DF0182 /* Sources */,
+				AF37CBB928E33EE700DF0182 /* Frameworks */,
+				AF37CBBA28E33EE700DF0182 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LuxTaxiSwiftUI;
+			productName = LuxTaxiSwiftUI;
+			productReference = AF37CBBC28E33EE700DF0182 /* LuxTaxiSwiftUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AF37CBCB28E33EE900DF0182 /* LuxTaxiSwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF37CBE328E33EE900DF0182 /* Build configuration list for PBXNativeTarget "LuxTaxiSwiftUITests" */;
+			buildPhases = (
+				AF37CBC828E33EE900DF0182 /* Sources */,
+				AF37CBC928E33EE900DF0182 /* Frameworks */,
+				AF37CBCA28E33EE900DF0182 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF37CBCE28E33EE900DF0182 /* PBXTargetDependency */,
+			);
+			name = LuxTaxiSwiftUITests;
+			productName = LuxTaxiSwiftUITests;
+			productReference = AF37CBCC28E33EE900DF0182 /* LuxTaxiSwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AF37CBD528E33EE900DF0182 /* LuxTaxiSwiftUIUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF37CBE628E33EE900DF0182 /* Build configuration list for PBXNativeTarget "LuxTaxiSwiftUIUITests" */;
+			buildPhases = (
+				AF37CBD228E33EE900DF0182 /* Sources */,
+				AF37CBD328E33EE900DF0182 /* Frameworks */,
+				AF37CBD428E33EE900DF0182 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF37CBD828E33EE900DF0182 /* PBXTargetDependency */,
+			);
+			name = LuxTaxiSwiftUIUITests;
+			productName = LuxTaxiSwiftUIUITests;
+			productReference = AF37CBD628E33EE900DF0182 /* LuxTaxiSwiftUIUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF37CBB428E33EE700DF0182 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					AF37CBBB28E33EE700DF0182 = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					AF37CBCB28E33EE900DF0182 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = AF37CBBB28E33EE700DF0182;
+					};
+					AF37CBD528E33EE900DF0182 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = AF37CBBB28E33EE700DF0182;
+					};
+				};
+			};
+			buildConfigurationList = AF37CBB728E33EE700DF0182 /* Build configuration list for PBXProject "LuxTaxiSwiftUI" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AF37CBB328E33EE700DF0182;
+			productRefGroup = AF37CBBD28E33EE700DF0182 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF37CBBB28E33EE700DF0182 /* LuxTaxiSwiftUI */,
+				AF37CBCB28E33EE900DF0182 /* LuxTaxiSwiftUITests */,
+				AF37CBD528E33EE900DF0182 /* LuxTaxiSwiftUIUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF37CBBA28E33EE700DF0182 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF37CBC728E33EE900DF0182 /* Preview Assets.xcassets in Resources */,
+				AF37CBC428E33EE900DF0182 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF37CBCA28E33EE900DF0182 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF37CBD428E33EE900DF0182 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF37CBB828E33EE700DF0182 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF37CBF528E347A200DF0182 /* LocationManager.swift in Sources */,
+				AF37CBC028E33EE700DF0182 /* LuxTaxiSwiftUIApp.swift in Sources */,
+				AF37CBF328E3453300DF0182 /* MapViewRepresentable.swift in Sources */,
+				AF37CBF128E344B300DF0182 /* HomeView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF37CBC828E33EE900DF0182 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF37CBD128E33EE900DF0182 /* LuxTaxiSwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF37CBD228E33EE900DF0182 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF37CBDD28E33EE900DF0182 /* LuxTaxiSwiftUIUITestsLaunchTests.swift in Sources */,
+				AF37CBDB28E33EE900DF0182 /* LuxTaxiSwiftUIUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF37CBCE28E33EE900DF0182 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF37CBBB28E33EE700DF0182 /* LuxTaxiSwiftUI */;
+			targetProxy = AF37CBCD28E33EE900DF0182 /* PBXContainerItemProxy */;
+		};
+		AF37CBD828E33EE900DF0182 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF37CBBB28E33EE700DF0182 /* LuxTaxiSwiftUI */;
+			targetProxy = AF37CBD728E33EE900DF0182 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AF37CBDE28E33EE900DF0182 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AF37CBDF28E33EE900DF0182 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF37CBE128E33EE900DF0182 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LuxTaxiSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = SHP38F3EM7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "you need to allow your location to connect your driver";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = barisozgen.LuxTaxiSwiftUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AF37CBE228E33EE900DF0182 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LuxTaxiSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = SHP38F3EM7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "you need to allow your location to connect your driver";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = barisozgen.LuxTaxiSwiftUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AF37CBE428E33EE900DF0182 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SHP38F3EM7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = barisozgen.LuxTaxiSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LuxTaxiSwiftUI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LuxTaxiSwiftUI";
+			};
+			name = Debug;
+		};
+		AF37CBE528E33EE900DF0182 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SHP38F3EM7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = barisozgen.LuxTaxiSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LuxTaxiSwiftUI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LuxTaxiSwiftUI";
+			};
+			name = Release;
+		};
+		AF37CBE728E33EE900DF0182 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SHP38F3EM7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = barisozgen.LuxTaxiSwiftUIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LuxTaxiSwiftUI;
+			};
+			name = Debug;
+		};
+		AF37CBE828E33EE900DF0182 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SHP38F3EM7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = barisozgen.LuxTaxiSwiftUIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LuxTaxiSwiftUI;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF37CBB728E33EE700DF0182 /* Build configuration list for PBXProject "LuxTaxiSwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF37CBDE28E33EE900DF0182 /* Debug */,
+				AF37CBDF28E33EE900DF0182 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF37CBE028E33EE900DF0182 /* Build configuration list for PBXNativeTarget "LuxTaxiSwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF37CBE128E33EE900DF0182 /* Debug */,
+				AF37CBE228E33EE900DF0182 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF37CBE328E33EE900DF0182 /* Build configuration list for PBXNativeTarget "LuxTaxiSwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF37CBE428E33EE900DF0182 /* Debug */,
+				AF37CBE528E33EE900DF0182 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF37CBE628E33EE900DF0182 /* Build configuration list for PBXNativeTarget "LuxTaxiSwiftUIUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF37CBE728E33EE900DF0182 /* Debug */,
+				AF37CBE828E33EE900DF0182 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF37CBB428E33EE700DF0182 /* Project object */;
+}
