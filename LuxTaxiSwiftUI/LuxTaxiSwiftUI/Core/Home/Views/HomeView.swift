@@ -9,16 +9,16 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @State private var showLocationSearchListView = false
+    @State private var mapState = MapViewState.noInput
     
     var body: some View {
         ZStack(alignment: .top){
-            MapViewRepresentable()
+            MapViewRepresentable(mapState: $mapState)
                 .ignoresSafeArea()
             
             locationSearchViews
             
-            MapViewMenuButton(showLocationSearchListView: $showLocationSearchListView)
+            MapViewMenuButton(mapState: $mapState)
           
         }
         .background(Color.theme.appBackgroundColor)
@@ -31,15 +31,15 @@ extension HomeView{
     private var locationSearchViews: some View {
         
         ZStack{
-            if !showLocationSearchListView {
+            if mapState == .noInput {
                 LocationSearchBoxView()
                     .onTapGesture {
                         withAnimation(.spring()){
-                            showLocationSearchListView.toggle()
+                            mapState = .searchingForLocation
                         }
                     }
-            } else {
-                LocationSearchListView(showLocationSearchListView: $showLocationSearchListView)
+            } else if mapState == .searchingForLocation {
+                LocationSearchListView(mapState: $mapState)
             }
         }
     }

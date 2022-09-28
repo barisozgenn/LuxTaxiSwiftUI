@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF1F74D428E4B48F001EA355 /* MapViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1F74D328E4B48F001EA355 /* MapViewState.swift */; };
+		AF1F74D928E4BDE6001EA355 /* TripRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1F74D828E4BDE6001EA355 /* TripRequestView.swift */; };
 		AF37CBC028E33EE700DF0182 /* LuxTaxiSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF37CBBF28E33EE700DF0182 /* LuxTaxiSwiftUIApp.swift */; };
 		AF37CBC428E33EE900DF0182 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF37CBC328E33EE900DF0182 /* Assets.xcassets */; };
 		AF37CBC728E33EE900DF0182 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF37CBC628E33EE900DF0182 /* Preview Assets.xcassets */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF1F74D328E4B48F001EA355 /* MapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewState.swift; sourceTree = "<group>"; };
+		AF1F74D828E4BDE6001EA355 /* TripRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripRequestView.swift; sourceTree = "<group>"; };
 		AF37CBBC28E33EE700DF0182 /* LuxTaxiSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuxTaxiSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF37CBBF28E33EE700DF0182 /* LuxTaxiSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuxTaxiSwiftUIApp.swift; sourceTree = "<group>"; };
 		AF37CBC328E33EE900DF0182 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,6 +93,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF1F74D528E4BD8E001EA355 /* Trip */ = {
+			isa = PBXGroup;
+			children = (
+				AF1F74D728E4BD9D001EA355 /* ViewModel */,
+				AF1F74D628E4BD96001EA355 /* Views */,
+			);
+			path = Trip;
+			sourceTree = "<group>";
+		};
+		AF1F74D628E4BD96001EA355 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AF1F74D828E4BDE6001EA355 /* TripRequestView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AF1F74D728E4BD9D001EA355 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		AF37CBB328E33EE700DF0182 = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +187,7 @@
 		AF37CBEA28E3442200DF0182 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				AF1F74D528E4BD8E001EA355 /* Trip */,
 				AF37CBF728E3528A00DF0182 /* LocationSearch */,
 				AF37CBF628E34E5200DF0182 /* Home */,
 			);
@@ -185,6 +214,7 @@
 		AF37CBED28E3444200DF0182 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AF1F74D328E4B48F001EA355 /* MapViewState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -375,7 +405,9 @@
 				AF37CBF528E347A200DF0182 /* LocationManager.swift in Sources */,
 				AF8F826828E41DFF009AC943 /* LocationSearchCell.swift in Sources */,
 				AF37CBFF28E3551F00DF0182 /* UIApplication.swift in Sources */,
+				AF1F74D428E4B48F001EA355 /* MapViewState.swift in Sources */,
 				AF8F826A28E4326D009AC943 /* LocationSearchListViewModel.swift in Sources */,
+				AF1F74D928E4BDE6001EA355 /* TripRequestView.swift in Sources */,
 				AF37CBC028E33EE700DF0182 /* LuxTaxiSwiftUIApp.swift in Sources */,
 				AF8F826428E35A44009AC943 /* MapViewMenuButton.swift in Sources */,
 				AF37CBF328E3453300DF0182 /* MapViewRepresentable.swift in Sources */,

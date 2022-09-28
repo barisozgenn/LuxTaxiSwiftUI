@@ -14,8 +14,8 @@ struct LocationSearchListView: View {
     @State private var paddingTop: CGFloat = 429
     @State private var backgroundOpacity: CGFloat = 0
 
-    @Binding var showLocationSearchListView: Bool
-        
+    @Binding var mapState : MapViewState
+    
     @EnvironmentObject var viewModel : LocationSearchListViewModel
     
     var body: some View {
@@ -105,7 +105,7 @@ extension LocationSearchListView {
                             viewModel.selectLocation(result)
 
                             withAnimation(.spring()){
-                                showLocationSearchListView.toggle()
+                                mapState = .locationSelected
                             }
                         }
                     
@@ -117,6 +117,6 @@ extension LocationSearchListView {
 }
 struct LocationSearchListView_Previews: PreviewProvider {
     static var previews: some View {
-        LocationSearchListView(showLocationSearchListView: .constant(true)).environmentObject( LocationSearchListViewModel())
+        LocationSearchListView(mapState: .constant(.searchingForLocation)).environmentObject( LocationSearchListViewModel())
     }
 }
