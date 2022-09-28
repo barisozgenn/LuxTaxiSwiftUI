@@ -15,4 +15,6 @@ struct ColorTheme{
     let primaryTextColor = Color("PrimaryTextColor")
     let carItemBackgroundColor = Color("CarItemBackgroundColor")
     let appBackgroundColor = Color("AppBackgroundColor")
+    let goldBackgroundColor = Color("GoldBackgroundColor")
+
 }
