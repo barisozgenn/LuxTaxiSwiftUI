@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LocationSearchBoxView: View {
     @State private var paddinBottom: CGFloat = 14
-    @Binding var searchLocation : String
+    //@Binding var searchLocation : String
     
     var body: some View {
         
@@ -17,11 +17,9 @@ struct LocationSearchBoxView: View {
             // SearchBar
             HStack{
                 Image(systemName: "magnifyingglass")
-                    .foregroundColor(
-                        searchLocation.isEmpty ?
-                            .gray : Color.theme.primaryTextColor)
+                    .foregroundColor(Color.theme.primaryTextColor)
                 
-                TextField("Where to?", text: $searchLocation)
+                TextField("Where to?", text: .constant("")/*,text:$searchLocation*/)
                     .disableAutocorrection(true)
                     .foregroundColor(Color.theme.primaryTextColor)
                     .overlay(
@@ -29,12 +27,12 @@ struct LocationSearchBoxView: View {
                             .padding()
                             .offset(x: 14)
                             .foregroundColor(Color.theme.primaryTextColor)
-                            .opacity(
+                            /*.opacity(
                                 searchLocation.isEmpty ?
-                                0 : 0.6)
+                                0 : 0.6)*/
                             .onTapGesture {
                                 UIApplication.shared.endEditing()
-                                searchLocation = ""
+                                //searchLocation = ""
                             }
                         ,alignment: .trailing
                     )
@@ -66,7 +64,7 @@ struct LocationSearchBoxView: View {
 
 struct LocationSearchBoxView_Previews: PreviewProvider {
     static var previews: some View {
-        LocationSearchBoxView(searchLocation: .constant(""))
+        LocationSearchBoxView()
         //.preferredColorScheme(.dark)
     }
 }

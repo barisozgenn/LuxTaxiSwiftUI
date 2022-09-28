@@ -10,12 +10,13 @@ import SwiftUI
 struct LocationSearchListView: View {
     
     @State private var firstLocationText = ""
-    @State private var endLocationText = ""
     
     @State private var paddingTop: CGFloat = 429
     @State private var backgroundOpacity: CGFloat = 0
 
-    @StateObject var viewModel = LocationSearchListViewModel()
+    @Binding var showLocationSearchListView: Bool
+        
+    @EnvironmentObject var viewModel : LocationSearchListViewModel
     
     var body: some View {
         VStack {
@@ -100,6 +101,13 @@ extension LocationSearchListView {
             VStack(alignment: .leading,spacing: 14){
                 ForEach(viewModel.results, id: \.self) { result in
                     LocationSearchCell(locationTitle: result.title, locationDescription: result.subtitle)
+                        .onTapGesture {
+                            viewModel.selectLocation(result)
+
+                            withAnimation(.spring()){
+                                showLocationSearchListView.toggle()
+                            }
+                        }
                     
                 }
             }
@@ -109,6 +117,6 @@ extension LocationSearchListView {
 }
 struct LocationSearchListView_Previews: PreviewProvider {
     static var previews: some View {
-        LocationSearchListView()
+        LocationSearchListView(showLocationSearchListView: .constant(true)).environmentObject( LocationSearchListViewModel())
     }
 }

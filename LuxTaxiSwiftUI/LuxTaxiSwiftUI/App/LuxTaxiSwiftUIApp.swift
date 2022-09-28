@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct LuxTaxiSwiftUIApp: App {
+    
+    @StateObject var locationSearchListViewModel = LocationSearchListViewModel()
+
     var body: some Scene {
         WindowGroup {
             HomeView()
+                .environmentObject(locationSearchListViewModel)
         }
     }
 }

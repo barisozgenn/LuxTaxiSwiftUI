@@ -9,7 +9,6 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @StateObject var viewModel = HomeViewModel()
     @State private var showLocationSearchListView = false
     
     var body: some View {
@@ -33,14 +32,14 @@ extension HomeView{
         
         ZStack{
             if !showLocationSearchListView {
-                LocationSearchBoxView(searchLocation: $viewModel.searchLocationText)
+                LocationSearchBoxView()
                     .onTapGesture {
                         withAnimation(.spring()){
                             showLocationSearchListView.toggle()
                         }
                     }
             } else {
-                LocationSearchListView()
+                LocationSearchListView(showLocationSearchListView: $showLocationSearchListView)
             }
         }
     }
