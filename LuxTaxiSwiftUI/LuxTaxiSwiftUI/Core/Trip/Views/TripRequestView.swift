@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct TripRequestView: View {
+    
+    @State private var paddinBottom: CGFloat = -529
+    @State private var selectedVehicleType : VehicleType = .sport
+    @EnvironmentObject var locationViewModel : LocationSearchListViewModel
+    
     var body: some View {
-        
         ZStack {
             VStack {
                 capsule
@@ -17,11 +21,12 @@ struct TripRequestView: View {
                 // trip info view
                 tripInfo
                 
-                Divider()
-                    .padding(.vertical)
+                divider
                 
                 // ride type selection view
                 rideTypes
+                
+                divider
                 
                 // payment option view
                 paymentType
@@ -29,12 +34,18 @@ struct TripRequestView: View {
                 // button
                 paymentButton
             }
-            .background(Color.theme.appBackgroundColor)
+            .padding(.bottom, paddinBottom)
+            .background(Color(.systemGroupedBackground).opacity(0.92))
             .cornerRadius(29)
             .shadow(
                 color: .black.opacity(0.58),
                 radius: 14,x: 0, y: -7
             )
+            .onAppear(perform: {
+                withAnimation(.default) {
+                    self.paddinBottom = 0
+                }
+            })
         }
         .frame(maxHeight: .infinity, alignment: .bottom)
         .ignoresSafeArea()
@@ -43,6 +54,7 @@ struct TripRequestView: View {
 }
 
 extension TripRequestView {
+    
     private var capsule : some View {
         Capsule()
             .foregroundColor(Color(.systemGray4))
@@ -112,29 +124,36 @@ extension TripRequestView {
             
             ScrollView(.horizontal){
                 HStack(spacing: 14){
-                    ForEach(0..<3, id: \.self){_ in
+                    ForEach(VehicleType.allCases){vechicle in
                         VStack(alignment: .leading){
-                            Image("app-car-sedan")
+                            Image(vechicle.imageName)
                                 .resizable()
                                 .scaledToFit()
                                 .padding(.top, 10)
-                            
-                            Text("Sport".uppercased())
-                                .foregroundColor(Color.theme.goldBackgroundColor)
-                                .fontWeight(.semibold)
-                                .font(.headline)
-                                .padding(.top)
-                                .padding(.horizontal)
-                            Text("39.99$".uppercased())
-                                .foregroundColor(Color.theme.primaryTextColor)
-                                .fontWeight(.semibold)
-                                .font(.headline)
-                                .padding(.horizontal)
-                                .padding(.bottom)
+                            VStack(alignment: .leading){
+                                Text(vechicle.title)
+                                    .foregroundColor(vechicle == selectedVehicleType ? Color(.systemGray5) : Color.theme.goldBackgroundColor)
+                                    .fontWeight(.bold)
+                                    .font(.headline)
+                                Text(/*"$29.07"*/locationViewModel.calculateTripPrice(forType: vechicle).toUSDCurrencyFormatted())
+                                    .foregroundColor(vechicle == selectedVehicleType ? Color(.black): Color.theme.primaryTextColor)
+                                    .font(.caption)
+                                    .fontWeight(.semibold)
+                                    .padding(.bottom, 8)
+                            }
+                            .padding(.horizontal)
+                            .padding(.vertical, 8)
+                           
                         }
                         .frame(width: 114 ,height: 150)
-                        .background(Color.theme.carItemBackgroundColor)
+                        .background(vechicle == selectedVehicleType ? Color.theme.goldBackgroundColor : Color.theme.carItemBackgroundColor)
+                        .scaleEffect(vechicle == selectedVehicleType ? 1.17 : 1.0)
                         .cornerRadius(14)
+                        .onTapGesture {
+                            withAnimation(.spring()){
+                                selectedVehicleType = vechicle
+                            }
+                        }
                     }
                 }
             }
@@ -151,10 +170,10 @@ extension TripRequestView {
                     .scaledToFit()
                     .frame(height: 24)
                     .padding()
-                    .foregroundColor(.gray)
+                    .foregroundColor(Color.theme.goldBackgroundColor)
                 
                 
-                Text("****1234".uppercased())
+                Text("**** 1234".uppercased())
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .foregroundColor(Color.theme.primaryTextColor)
                     .fontWeight(.bold)
@@ -167,10 +186,10 @@ extension TripRequestView {
                 
             }
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
+        .frame(height: 50, alignment: .leading)
         .background(Color.theme.carItemBackgroundColor)
         .cornerRadius(14)
-        .padding()
+        .padding(.horizontal)
     }
     
     private var paymentButton : some View {
@@ -190,8 +209,16 @@ extension TripRequestView {
         .frame(maxWidth: .infinity)
         .background(Color.theme.carItemBackgroundColor)
         .cornerRadius(14)
-        .padding()
-        .padding(.bottom, 30)
+        .padding(.horizontal)
+        .padding(.bottom, 26)
+        .padding(.top, 20)
+    }
+    
+    private var divider : some View {
+        Divider()
+            .overlay(Color(.systemGray2))
+            .padding(.vertical, 4)
+        
     }
 }
 

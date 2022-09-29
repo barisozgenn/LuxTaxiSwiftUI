@@ -10,19 +10,29 @@ import SwiftUI
 struct HomeView: View {
     
     @State private var mapState = MapViewState.noInput
+    @EnvironmentObject var locationViewModel : LocationSearchListViewModel
     
     var body: some View {
-        ZStack(alignment: .top){
-            MapViewRepresentable(mapState: $mapState)
-                .ignoresSafeArea()
-            
-            locationSearchViews
-            
-            MapViewMenuButton(mapState: $mapState)
-          
-        }
-        .background(Color.theme.appBackgroundColor)
-        
+            ZStack(alignment: .top){
+                MapViewRepresentable(mapState: $mapState)
+                    .ignoresSafeArea()
+                
+                locationSearchViews
+                    //.transition(.move(edge: .bottom))
+                
+                MapViewMenuButton(mapState: $mapState)
+              
+            }
+            .background(Color.theme.appBackgroundColor)
+            .onReceive(LocationManager.shared.$userLocation) { location in
+                if let location = location {
+                    
+                    locationViewModel.userLocation = location
+                    
+                    print("DEBUG: user location in HomeView -> \(location)")
+                }
+            }
+       
     }
 }
 
@@ -31,15 +41,19 @@ extension HomeView{
     private var locationSearchViews: some View {
         
         ZStack{
-            if mapState == .noInput {
+            switch mapState {
+             
+            case .noInput :
                 LocationSearchBoxView()
                     .onTapGesture {
                         withAnimation(.spring()){
                             mapState = .searchingForLocation
                         }
                     }
-            } else if mapState == .searchingForLocation {
+            case .searchingForLocation :
                 LocationSearchListView(mapState: $mapState)
+            case .locationSelected :
+                  TripRequestView()
             }
         }
     }

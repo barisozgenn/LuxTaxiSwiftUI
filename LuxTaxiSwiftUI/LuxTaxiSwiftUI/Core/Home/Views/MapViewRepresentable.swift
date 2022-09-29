@@ -12,7 +12,7 @@ struct MapViewRepresentable: UIViewRepresentable {
     
     
     let mapView = MKMapView()
-    let locationManager = LocationManager()
+    //let locationManager = LocationManager.shared
     @Binding var mapState : MapViewState
     
     @EnvironmentObject var locationSearchListViewModel : LocationSearchListViewModel
@@ -22,6 +22,14 @@ struct MapViewRepresentable: UIViewRepresentable {
         mapView.isRotateEnabled = false
         mapView.showsUserLocation = true
         mapView.userTrackingMode = .follow
+        
+       /* let configuration = MKStandardMapConfiguration(elevationStyle: .realistic, emphasisStyle: .default)
+        configuration.showsTraffic = true
+        
+        mapView.preferredConfiguration = configuration*/
+
+        // mapType will be depracated for next versions
+        //mapView.mapType = .mutedStandard
         
         return mapView
     }
@@ -99,8 +107,8 @@ extension MapViewRepresentable {
         func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
             
             let polyLine = MKPolylineRenderer(overlay: overlay)
-            polyLine.strokeColor = UIColor(Color.theme.goldBackgroundColor)
-            polyLine.lineWidth = 10
+            polyLine.strokeColor = UIColor(Color.theme.goldBackgroundColor.opacity(0.92))
+            polyLine.lineWidth = 7
             
             return polyLine
         }
@@ -117,7 +125,7 @@ extension MapViewRepresentable {
             parent.mapView.addAnnotation(annotation)
             parent.mapView.selectAnnotation(annotation, animated: true)
             
-            parent.mapView.showAnnotations(parent.mapView.annotations, animated: true)
+            //parent.mapView.showAnnotations(parent.mapView.annotations, animated: true)
         }
         
         func configureRoutePolyline(withDestinationCordinate coordinate: CLLocationCoordinate2D){
@@ -127,6 +135,12 @@ extension MapViewRepresentable {
             getDestinationRoute(from: userLocationCoordinate,
                                 to: coordinate) { route in
                 self.parent.mapView.addOverlay(route.polyline)
+                
+                let mapRect = self.parent.mapView.mapRectThatFits(
+                    route.polyline.boundingMapRect,
+                    edgePadding: .init(top: 114, left: 29, bottom: 529, right: 29))
+                
+                self.parent.mapView.setRegion(MKCoordinateRegion(mapRect), animated: true)
             }
         }
         

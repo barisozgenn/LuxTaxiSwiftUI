@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF0C22B928E58D8A00CBB79F /* VehicleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0C22B828E58D8A00CBB79F /* VehicleType.swift */; };
+		AF0C22BB28E5A5EE00CBB79F /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0C22BA28E5A5EE00CBB79F /* Double.swift */; };
 		AF1F74D428E4B48F001EA355 /* MapViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1F74D328E4B48F001EA355 /* MapViewState.swift */; };
 		AF1F74D928E4BDE6001EA355 /* TripRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1F74D828E4BDE6001EA355 /* TripRequestView.swift */; };
 		AF37CBC028E33EE700DF0182 /* LuxTaxiSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF37CBBF28E33EE700DF0182 /* LuxTaxiSwiftUIApp.swift */; };
@@ -45,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF0C22B828E58D8A00CBB79F /* VehicleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleType.swift; sourceTree = "<group>"; };
+		AF0C22BA28E5A5EE00CBB79F /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		AF1F74D328E4B48F001EA355 /* MapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewState.swift; sourceTree = "<group>"; };
 		AF1F74D828E4BDE6001EA355 /* TripRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripRequestView.swift; sourceTree = "<group>"; };
 		AF37CBBC28E33EE700DF0182 /* LuxTaxiSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuxTaxiSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,6 +203,7 @@
 			children = (
 				AF37CBFC28E3538800DF0182 /* Color.swift */,
 				AF37CBFE28E3551F00DF0182 /* UIApplication.swift */,
+				AF0C22BA28E5A5EE00CBB79F /* Double.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -215,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				AF1F74D328E4B48F001EA355 /* MapViewState.swift */,
+				AF0C22B828E58D8A00CBB79F /* VehicleType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -414,6 +420,8 @@
 				AF37CBF128E344B300DF0182 /* HomeView.swift in Sources */,
 				AF37CBFB28E3530A00DF0182 /* LocationSearchBoxView.swift in Sources */,
 				AF37CBFD28E3538800DF0182 /* Color.swift in Sources */,
+				AF0C22B928E58D8A00CBB79F /* VehicleType.swift in Sources */,
+				AF0C22BB28E5A5EE00CBB79F /* Double.swift in Sources */,
 				AF8F826628E417CF009AC943 /* LocationSearchListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
