@@ -11,6 +11,8 @@ struct HomeView: View {
     
     @State private var mapState = MapViewState.noInput
     @EnvironmentObject var locationViewModel : LocationSearchListViewModel
+    @EnvironmentObject var launchScreenManager : LaunchScreenViewModel
+    @State private var isLauncScrenAnimEnd = false
     
     var body: some View {
             ZStack(alignment: .top){
@@ -32,6 +34,15 @@ struct HomeView: View {
                     print("DEBUG: user location in HomeView -> \(location)")
                 }
             }
+            .onAppear{
+                DispatchQueue
+                    .main
+                    .asyncAfter(deadline: .now() + 1.7 ) {
+                        launchScreenManager.dismiss()
+                        isLauncScrenAnimEnd = true
+
+                    }
+            }
        
     }
 }
@@ -44,15 +55,18 @@ extension HomeView{
             switch mapState {
              
             case .noInput :
-                LocationSearchBoxView()
-                    .onTapGesture {
-                        withAnimation(.spring()){
-                            mapState = .searchingForLocation
+                if isLauncScrenAnimEnd {
+                    LocationSearchBoxView()
+                        .onTapGesture {
+                            withAnimation(.spring()){
+                                mapState = .searchingForLocation
+                            }
                         }
-                    }
+                }
             case .searchingForLocation :
                 LocationSearchListView(mapState: $mapState)
-            case .locationSelected :
+                
+            case .locationSelected, .routeCreated :
                   TripRequestView()
             }
         }
@@ -61,5 +75,6 @@ extension HomeView{
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+            .environmentObject(LaunchScreenViewModel())
     }
 }

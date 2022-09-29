@@ -87,23 +87,25 @@ extension TripRequestView {
                     .frame(height: 45)
                     .foregroundColor(Color(.gray))
                     .fontWeight(.semibold)
-                
-                Text("Destination Point")
-                    .foregroundColor(Color.theme.goldBackgroundColor)
-                    .fontWeight(.bold)
-                    .frame(height: 45)
+                if let selectedLocation = locationViewModel.selectedLocation {
+                    Text(selectedLocation.title)
+                        .foregroundColor(Color.theme.goldBackgroundColor)
+                        .fontWeight(.bold)
+                        .frame(height: 45)
+                }
+               
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             
             
             // time info
             VStack(spacing: 5) {
-                Text("20:29")
+                Text(locationViewModel.pickingUpTime ?? "")
                     .frame(height: 45)
                     .foregroundColor(Color(.gray))
                     .fontWeight(.semibold)
                 
-                Text("20:58")
+                Text(locationViewModel.droppingOffTime ?? "")
                     .foregroundColor(Color.theme.goldBackgroundColor)
                     .fontWeight(.bold)
                     .frame(height: 45)
@@ -135,7 +137,7 @@ extension TripRequestView {
                                     .foregroundColor(vechicle == selectedVehicleType ? Color(.systemGray5) : Color.theme.goldBackgroundColor)
                                     .fontWeight(.bold)
                                     .font(.headline)
-                                Text(/*"$29.07"*/locationViewModel.calculateTripPrice(forType: vechicle).toUSDCurrencyFormatted())
+                                Text(/*$29.072.*/locationViewModel.calculateTripPrice(forType: vechicle).toUSDCurrencyFormatted())
                                     .foregroundColor(vechicle == selectedVehicleType ? Color(.black): Color.theme.primaryTextColor)
                                     .font(.caption)
                                     .fontWeight(.semibold)

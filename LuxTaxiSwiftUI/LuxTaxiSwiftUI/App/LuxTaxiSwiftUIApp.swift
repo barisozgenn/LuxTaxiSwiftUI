@@ -10,12 +10,21 @@ import SwiftUI
 @main
 struct LuxTaxiSwiftUIApp: App {
     
+    @StateObject var launchScreenManager = LaunchScreenViewModel()
     @StateObject var locationSearchListViewModel = LocationSearchListViewModel()
 
     var body: some Scene {
         WindowGroup {
-            HomeView()
-                .environmentObject(locationSearchListViewModel)
+            ZStack{
+                HomeView()
+                    .environmentObject(locationSearchListViewModel)
+                    .environmentObject(launchScreenManager)
+                
+                if launchScreenManager.state != .completed{
+                    LaunchScreenView()
+                }
+            }
+            
         }
     }
 }

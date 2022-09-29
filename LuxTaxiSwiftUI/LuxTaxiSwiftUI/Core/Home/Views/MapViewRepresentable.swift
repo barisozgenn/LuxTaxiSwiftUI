@@ -23,11 +23,11 @@ struct MapViewRepresentable: UIViewRepresentable {
         mapView.showsUserLocation = true
         mapView.userTrackingMode = .follow
         
-       /* let configuration = MKStandardMapConfiguration(elevationStyle: .realistic, emphasisStyle: .default)
-        configuration.showsTraffic = true
+        /* let configuration = MKStandardMapConfiguration(elevationStyle: .realistic, emphasisStyle: .default)
+         configuration.showsTraffic = true
+         
+         mapView.preferredConfiguration = configuration*/
         
-        mapView.preferredConfiguration = configuration*/
-
         // mapType will be depracated for next versions
         //mapView.mapType = .mutedStandard
         
@@ -45,7 +45,7 @@ struct MapViewRepresentable: UIViewRepresentable {
             break
         case .locationSelected:
             
-            if let selectedLocationCoordinate = locationSearchListViewModel.selectedLocationCoordinate {
+            if let selectedLocationCoordinate = locationSearchListViewModel.selectedLocation?.coordinate {
                 
                 context.coordinator.addAndSelectAnnotation(withCoordinate: selectedLocationCoordinate)
                 context.coordinator.configureRoutePolyline(withDestinationCordinate: selectedLocationCoordinate)
@@ -53,6 +53,8 @@ struct MapViewRepresentable: UIViewRepresentable {
                 print("DEBUG: selected Location on map -> \(selectedLocationCoordinate)")
                 break
             }
+        case .routeCreated :
+            break
         }
     }
     
@@ -132,40 +134,19 @@ extension MapViewRepresentable {
             
             guard let userLocationCoordinate = self.userLocationCoordinate else { return }
             
-            getDestinationRoute(from: userLocationCoordinate,
-                                to: coordinate) { route in
-                self.parent.mapView.addOverlay(route.polyline)
-                
-                let mapRect = self.parent.mapView.mapRectThatFits(
-                    route.polyline.boundingMapRect,
-                    edgePadding: .init(top: 114, left: 29, bottom: 529, right: 29))
-                
-                self.parent.mapView.setRegion(MKCoordinateRegion(mapRect), animated: true)
-            }
-        }
-        
-        func getDestinationRoute (from userLocation: CLLocationCoordinate2D,
-                                  to destination: CLLocationCoordinate2D,
-                                  completion: @escaping(MKRoute) -> Void ){
-            
-            let userPlacemark = MKPlacemark(coordinate: userLocation)
-            let destinationPlacemark = MKPlacemark(coordinate: destination)
-            
-            let request = MKDirections.Request()
-            request.source = MKMapItem(placemark: userPlacemark)
-            request.destination = MKMapItem(placemark: destinationPlacemark)
-            
-            let direction = MKDirections(request: request)
-            
-            direction.calculate { response, error in
-                if let error = error {
-                    print("DEBUG: direction calculate error -> \(error.localizedDescription)")
-                    return
+            parent.locationSearchListViewModel.getDestinationRoute(
+                from: userLocationCoordinate,
+                to: coordinate) { route in
+                    
+                    self.parent.mapView.addOverlay(route.polyline)
+                    self.parent.mapState = .routeCreated
+                    
+                    let mapRect = self.parent.mapView.mapRectThatFits(
+                        route.polyline.boundingMapRect,
+                        edgePadding: .init(top: 114, left: 29, bottom: 529, right: 29))
+                    
+                    self.parent.mapView.setRegion(MKCoordinateRegion(mapRect), animated: true)
                 }
-                
-                guard let route = response?.routes.first else { return }
-                completion(route)
-            }
         }
         
         func clearMapViewAndRecenter() {

@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		AF0C22B928E58D8A00CBB79F /* VehicleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0C22B828E58D8A00CBB79F /* VehicleType.swift */; };
 		AF0C22BB28E5A5EE00CBB79F /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0C22BA28E5A5EE00CBB79F /* Double.swift */; };
+		AF0C22BD28E5BE2D00CBB79F /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0C22BC28E5BE2D00CBB79F /* LocationModel.swift */; };
+		AF0C22BF28E5C2B200CBB79F /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0C22BE28E5C2B200CBB79F /* Date.swift */; };
+		AF0C22C428E5DA4D00CBB79F /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0C22C328E5DA4D00CBB79F /* LaunchScreenView.swift */; };
+		AF0C22C628E5F4D800CBB79F /* LaunchScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0C22C528E5F4D800CBB79F /* LaunchScreenViewModel.swift */; };
 		AF1F74D428E4B48F001EA355 /* MapViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1F74D328E4B48F001EA355 /* MapViewState.swift */; };
 		AF1F74D928E4BDE6001EA355 /* TripRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1F74D828E4BDE6001EA355 /* TripRequestView.swift */; };
 		AF37CBC028E33EE700DF0182 /* LuxTaxiSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF37CBBF28E33EE700DF0182 /* LuxTaxiSwiftUIApp.swift */; };
@@ -49,6 +53,11 @@
 /* Begin PBXFileReference section */
 		AF0C22B828E58D8A00CBB79F /* VehicleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleType.swift; sourceTree = "<group>"; };
 		AF0C22BA28E5A5EE00CBB79F /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		AF0C22BC28E5BE2D00CBB79F /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		AF0C22BE28E5C2B200CBB79F /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		AF0C22C328E5DA4D00CBB79F /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
+		AF0C22C528E5F4D800CBB79F /* LaunchScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewModel.swift; sourceTree = "<group>"; };
+		AF0C22C728E5F9A900CBB79F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		AF1F74D328E4B48F001EA355 /* MapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewState.swift; sourceTree = "<group>"; };
 		AF1F74D828E4BDE6001EA355 /* TripRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripRequestView.swift; sourceTree = "<group>"; };
 		AF37CBBC28E33EE700DF0182 /* LuxTaxiSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuxTaxiSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +106,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF0C22C028E5D64F00CBB79F /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				AF0C22C228E5D68C00CBB79F /* ViewModels */,
+				AF0C22C128E5D66B00CBB79F /* Views */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		AF0C22C128E5D66B00CBB79F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AF0C22C328E5DA4D00CBB79F /* LaunchScreenView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AF0C22C228E5D68C00CBB79F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				AF0C22C528E5F4D800CBB79F /* LaunchScreenViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		AF1F74D528E4BD8E001EA355 /* Trip */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +178,7 @@
 		AF37CBBE28E33EE700DF0182 /* LuxTaxiSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				AF0C22C728E5F9A900CBB79F /* Info.plist */,
 				AF37CBEC28E3443500DF0182 /* Utils */,
 				AF37CBEB28E3442800DF0182 /* Extensions */,
 				AF37CBED28E3444200DF0182 /* Models */,
@@ -191,6 +226,7 @@
 		AF37CBEA28E3442200DF0182 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				AF0C22C028E5D64F00CBB79F /* Launch */,
 				AF1F74D528E4BD8E001EA355 /* Trip */,
 				AF37CBF728E3528A00DF0182 /* LocationSearch */,
 				AF37CBF628E34E5200DF0182 /* Home */,
@@ -204,6 +240,7 @@
 				AF37CBFC28E3538800DF0182 /* Color.swift */,
 				AF37CBFE28E3551F00DF0182 /* UIApplication.swift */,
 				AF0C22BA28E5A5EE00CBB79F /* Double.swift */,
+				AF0C22BE28E5C2B200CBB79F /* Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -221,6 +258,7 @@
 			children = (
 				AF1F74D328E4B48F001EA355 /* MapViewState.swift */,
 				AF0C22B828E58D8A00CBB79F /* VehicleType.swift */,
+				AF0C22BC28E5BE2D00CBB79F /* LocationModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -414,8 +452,12 @@
 				AF1F74D428E4B48F001EA355 /* MapViewState.swift in Sources */,
 				AF8F826A28E4326D009AC943 /* LocationSearchListViewModel.swift in Sources */,
 				AF1F74D928E4BDE6001EA355 /* TripRequestView.swift in Sources */,
+				AF0C22BF28E5C2B200CBB79F /* Date.swift in Sources */,
+				AF0C22C428E5DA4D00CBB79F /* LaunchScreenView.swift in Sources */,
+				AF0C22C628E5F4D800CBB79F /* LaunchScreenViewModel.swift in Sources */,
 				AF37CBC028E33EE700DF0182 /* LuxTaxiSwiftUIApp.swift in Sources */,
 				AF8F826428E35A44009AC943 /* MapViewMenuButton.swift in Sources */,
+				AF0C22BD28E5BE2D00CBB79F /* LocationModel.swift in Sources */,
 				AF37CBF328E3453300DF0182 /* MapViewRepresentable.swift in Sources */,
 				AF37CBF128E344B300DF0182 /* HomeView.swift in Sources */,
 				AF37CBFB28E3530A00DF0182 /* LocationSearchBoxView.swift in Sources */,
@@ -584,10 +626,10 @@
 				DEVELOPMENT_TEAM = SHP38F3EM7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LuxTaxiSwiftUI/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "you need to allow your location to connect your driver";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -613,10 +655,10 @@
 				DEVELOPMENT_TEAM = SHP38F3EM7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LuxTaxiSwiftUI/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "you need to allow your location to connect your driver";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
