@@ -12,4 +12,5 @@ enum MapViewState {
     case searchingForLocation
     case locationSelected
     case routeCreated
+    case showMenu
 }

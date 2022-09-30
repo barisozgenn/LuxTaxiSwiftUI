@@ -90,7 +90,7 @@ extension LocationSearchListView {
         .padding(.top, paddingTop)
         .onAppear(perform: {
             withAnimation(.default) {
-                self.paddingTop = 114
+                self.paddingTop = 158
                 self.backgroundOpacity = 0.92
             }
         })

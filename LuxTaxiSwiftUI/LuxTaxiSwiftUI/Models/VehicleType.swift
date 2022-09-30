@@ -42,11 +42,11 @@ enum VehicleType: Int, CaseIterable, Identifiable {
         switch self {
             
         case .sport:
-            return 7
+            return 14
         case .suv:
-            return 12
-        case .van:
             return 29
+        case .van:
+            return 58
         }
     }
     
@@ -54,11 +54,11 @@ enum VehicleType: Int, CaseIterable, Identifiable {
         switch self {
             
         case .sport:
-            return 0.14
+            return 0.007
         case .suv:
-            return 0.17
+            return 0.014
         case .van:
-            return 0.192
+            return 0.021
         }
     }
     

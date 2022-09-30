@@ -22,7 +22,7 @@ struct MapViewRepresentable: UIViewRepresentable {
         mapView.isRotateEnabled = false
         mapView.showsUserLocation = true
         mapView.userTrackingMode = .follow
-        
+        mapView.isZoomEnabled = true
         /* let configuration = MKStandardMapConfiguration(elevationStyle: .realistic, emphasisStyle: .default)
          configuration.showsTraffic = true
          
@@ -53,8 +53,8 @@ struct MapViewRepresentable: UIViewRepresentable {
                 print("DEBUG: selected Location on map -> \(selectedLocationCoordinate)")
                 break
             }
-        case .routeCreated :
-            break
+        case .routeCreated, .showMenu :
+            break            
         }
     }
     

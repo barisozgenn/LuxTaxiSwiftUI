@@ -44,12 +44,14 @@ extension MapViewMenuButton {
         switch state {
             
         case .noInput:
-            print("DEBUG: MapViewMenuButton: .noInput")
+            mapState = .showMenu
         case .searchingForLocation:
             mapState = .noInput
-        case .locationSelected, .routeCreated:
+        case .locationSelected, .routeCreated, .showMenu:
             mapState = .noInput
             viewModel.selectedLocation = nil
+       
+            
         }
     }
     
@@ -60,6 +62,8 @@ extension MapViewMenuButton {
             return "line.3.horizontal"
         case .searchingForLocation, .locationSelected, .routeCreated:
             return "arrow.left"
+        case .showMenu:
+            return "xmark"
         }
     }
 }

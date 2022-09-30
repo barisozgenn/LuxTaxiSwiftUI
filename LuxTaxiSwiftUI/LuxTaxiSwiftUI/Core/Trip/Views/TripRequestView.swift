@@ -82,7 +82,7 @@ extension TripRequestView {
             .padding(.horizontal)
             
             // locations
-            VStack(spacing: 5) {
+            VStack(alignment: .leading, spacing: 5) {
                 Text("Current Location")
                     .frame(height: 45)
                     .foregroundColor(Color(.gray))
