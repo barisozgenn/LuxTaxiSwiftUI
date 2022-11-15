@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct AuthView: View {
-    @StateObject private var vm = AuthViewModel()
+    @EnvironmentObject private var vm : AuthViewModel
+    @StateObject var launchScreenManager = LaunchScreenViewModel()
+    @StateObject var locationSearchListViewModel = LocationSearchListViewModel()
+    
     @State var countrySelectionViewVisiblity : Bool = false
     
     private let gridItem = GridItem(.flexible(), spacing: 14)
@@ -43,14 +46,16 @@ struct AuthView: View {
                 }
             }
             
-            if vm.userSession != nil {
                 HomeView()
+                    .environmentObject(locationSearchListViewModel)
+                    .environmentObject(launchScreenManager)
                     .cornerRadius(!animTrans ? 29 : 0)
                     .clipped()
                     .scaleEffect(!animTrans ? 0.29 : 1)
                     .rotation3DEffect(.degrees(!animTrans ? 90 : 0), axis:(x: 0, y: 1, z: 0))
                     .offset(x: !animTrans ? 230 : 0)
-            }
+                    
+            
             
         }
         .background(backgroundImage)
@@ -302,5 +307,6 @@ extension AuthView {
 struct AuthView_Previews: PreviewProvider {
     static var previews: some View {
         AuthView()
+            .environmentObject(AuthViewModel())
     }
 }

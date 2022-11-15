@@ -50,6 +50,7 @@
 		AFE7C9DB2923840D007479B7 /* CountrySelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE7C9DA2923840D007479B7 /* CountrySelectionViewModel.swift */; };
 		AFE7C9DD2923845B007479B7 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE7C9DC2923845B007479B7 /* SearchBarView.swift */; };
 		AFE7C9E029238930007479B7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFE7C9DF29238930007479B7 /* GoogleService-Info.plist */; };
+		AFE7C9E22923DB3D007479B7 /* FirebaseAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE7C9E12923DB3D007479B7 /* FirebaseAppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,7 @@
 		AFE7C9DA2923840D007479B7 /* CountrySelectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountrySelectionViewModel.swift; sourceTree = "<group>"; };
 		AFE7C9DC2923845B007479B7 /* SearchBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		AFE7C9DF29238930007479B7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AFE7C9E12923DB3D007479B7 /* FirebaseAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseAppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -314,7 +316,7 @@
 		AF37CBEC28E3443500DF0182 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				AF37CBF428E347A200DF0182 /* LocationManager.swift */,
+				AFE7C9E12923DB3D007479B7 /* FirebaseAppDelegate.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -407,6 +409,7 @@
 			children = (
 				AFE7C9D12923822A007479B7 /* AuthManager.swift */,
 				AF8237A9292367FB007EB3D8 /* GraphQLNetworkManager.swift */,
+				AF37CBF428E347A200DF0182 /* LocationManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -633,6 +636,7 @@
 				AF0C22C428E5DA4D00CBB79F /* LaunchScreenView.swift in Sources */,
 				AF0C22C628E5F4D800CBB79F /* LaunchScreenViewModel.swift in Sources */,
 				AF37CBC028E33EE700DF0182 /* LuxTaxiSwiftUIApp.swift in Sources */,
+				AFE7C9E22923DB3D007479B7 /* FirebaseAppDelegate.swift in Sources */,
 				AF8F826428E35A44009AC943 /* MapViewMenuButton.swift in Sources */,
 				AFE7C9DD2923845B007479B7 /* SearchBarView.swift in Sources */,
 				AF0C22BD28E5BE2D00CBB79F /* LocationModel.swift in Sources */,

@@ -50,7 +50,7 @@ class AuthViewModel: ObservableObject {
     }
     
     func sendSMSButton(){
-        if phoneNumberText.count < 10 ||
+        if phoneNumberText.count < 9 ||
            phoneNumberText.count > 15 {
             warningPhoneNumberText = "⚠ Invalid phone number"
             return
