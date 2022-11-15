@@ -29,6 +29,15 @@
 		AF37CBFB28E3530A00DF0182 /* LocationSearchBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF37CBFA28E3530900DF0182 /* LocationSearchBoxView.swift */; };
 		AF37CBFD28E3538800DF0182 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF37CBFC28E3538800DF0182 /* Color.swift */; };
 		AF37CBFF28E3551F00DF0182 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF37CBFE28E3551F00DF0182 /* UIApplication.swift */; };
+		AF82379F2923672B007EB3D8 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = AF82379E2923672B007EB3D8 /* Apollo */; };
+		AF8237A429236772007EB3D8 /* schemaCountry.graphql in Resources */ = {isa = PBXBuildFile; fileRef = AF8237A029236772007EB3D8 /* schemaCountry.graphql */; };
+		AF8237A529236772007EB3D8 /* GraphQLAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8237A129236772007EB3D8 /* GraphQLAPI.swift */; };
+		AF8237A629236772007EB3D8 /* queriesCountry.graphql in Resources */ = {isa = PBXBuildFile; fileRef = AF8237A229236772007EB3D8 /* queriesCountry.graphql */; };
+		AF8237A729236772007EB3D8 /* CountryGraphQLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8237A329236772007EB3D8 /* CountryGraphQLService.swift */; };
+		AF8237AA292367FB007EB3D8 /* GraphQLNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8237A9292367FB007EB3D8 /* GraphQLNetworkManager.swift */; };
+		AF8237AD29236C1D007EB3D8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AF8237AC29236C1D007EB3D8 /* FirebaseAuth */; };
+		AF8237AF29236C1D007EB3D8 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = AF8237AE29236C1D007EB3D8 /* FirebaseDatabase */; };
+		AF8237B129236C1D007EB3D8 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AF8237B029236C1D007EB3D8 /* FirebaseFirestore */; };
 		AF8F826428E35A44009AC943 /* MapViewMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F826328E35A44009AC943 /* MapViewMenuButton.swift */; };
 		AF8F826628E417CF009AC943 /* LocationSearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F826528E417CF009AC943 /* LocationSearchListView.swift */; };
 		AF8F826828E41DFF009AC943 /* LocationSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F826728E41DFF009AC943 /* LocationSearchCell.swift */; };
@@ -79,6 +88,11 @@
 		AF37CBFA28E3530900DF0182 /* LocationSearchBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchBoxView.swift; sourceTree = "<group>"; };
 		AF37CBFC28E3538800DF0182 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		AF37CBFE28E3551F00DF0182 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		AF8237A029236772007EB3D8 /* schemaCountry.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = schemaCountry.graphql; sourceTree = "<group>"; };
+		AF8237A129236772007EB3D8 /* GraphQLAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphQLAPI.swift; sourceTree = "<group>"; };
+		AF8237A229236772007EB3D8 /* queriesCountry.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = queriesCountry.graphql; sourceTree = "<group>"; };
+		AF8237A329236772007EB3D8 /* CountryGraphQLService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryGraphQLService.swift; sourceTree = "<group>"; };
+		AF8237A9292367FB007EB3D8 /* GraphQLNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphQLNetworkManager.swift; sourceTree = "<group>"; };
 		AF8F826328E35A44009AC943 /* MapViewMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewMenuButton.swift; sourceTree = "<group>"; };
 		AF8F826528E417CF009AC943 /* LocationSearchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchListView.swift; sourceTree = "<group>"; };
 		AF8F826728E41DFF009AC943 /* LocationSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchCell.swift; sourceTree = "<group>"; };
@@ -90,6 +104,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF8237AF29236C1D007EB3D8 /* FirebaseDatabase in Frameworks */,
+				AF8237B129236C1D007EB3D8 /* FirebaseFirestore in Frameworks */,
+				AF82379F2923672B007EB3D8 /* Apollo in Frameworks */,
+				AF8237AD29236C1D007EB3D8 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +224,8 @@
 		AF37CBBE28E33EE700DF0182 /* LuxTaxiSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				AF8237A8292367E0007EB3D8 /* Managers */,
+				AF82379B292366B0007EB3D8 /* Services */,
 				AF0C22C728E5F9A900CBB79F /* Info.plist */,
 				AF37CBEC28E3443500DF0182 /* Utils */,
 				AF37CBEB28E3442800DF0182 /* Extensions */,
@@ -346,6 +366,33 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		AF82379B292366B0007EB3D8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AF82379C292366BD007EB3D8 /* GraphQL */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AF82379C292366BD007EB3D8 /* GraphQL */ = {
+			isa = PBXGroup;
+			children = (
+				AF8237A329236772007EB3D8 /* CountryGraphQLService.swift */,
+				AF8237A129236772007EB3D8 /* GraphQLAPI.swift */,
+				AF8237A229236772007EB3D8 /* queriesCountry.graphql */,
+				AF8237A029236772007EB3D8 /* schemaCountry.graphql */,
+			);
+			path = GraphQL;
+			sourceTree = "<group>";
+		};
+		AF8237A8292367E0007EB3D8 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				AF8237A9292367FB007EB3D8 /* GraphQLNetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -362,6 +409,12 @@
 			dependencies = (
 			);
 			name = LuxTaxiSwiftUI;
+			packageProductDependencies = (
+				AF82379E2923672B007EB3D8 /* Apollo */,
+				AF8237AC29236C1D007EB3D8 /* FirebaseAuth */,
+				AF8237AE29236C1D007EB3D8 /* FirebaseDatabase */,
+				AF8237B029236C1D007EB3D8 /* FirebaseFirestore */,
+			);
 			productName = LuxTaxiSwiftUI;
 			productReference = AF37CBBC28E33EE700DF0182 /* LuxTaxiSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -434,6 +487,10 @@
 				Base,
 			);
 			mainGroup = AF37CBB328E33EE700DF0182;
+			packageReferences = (
+				AF82379D2923672B007EB3D8 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				AF8237AB29236C1D007EB3D8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = AF37CBBD28E33EE700DF0182 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -451,7 +508,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF37CBC728E33EE900DF0182 /* Preview Assets.xcassets in Resources */,
+				AF8237A629236772007EB3D8 /* queriesCountry.graphql in Resources */,
 				AF37CBC428E33EE900DF0182 /* Assets.xcassets in Resources */,
+				AF8237A429236772007EB3D8 /* schemaCountry.graphql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +537,7 @@
 			files = (
 				AF37CBF528E347A200DF0182 /* LocationManager.swift in Sources */,
 				AF8F826828E41DFF009AC943 /* LocationSearchCell.swift in Sources */,
+				AF8237AA292367FB007EB3D8 /* GraphQLNetworkManager.swift in Sources */,
 				AF37CBFF28E3551F00DF0182 /* UIApplication.swift in Sources */,
 				AF0C22CE28E6CC0700CBB79F /* SideMenu.swift in Sources */,
 				AF1F74D428E4B48F001EA355 /* MapViewState.swift in Sources */,
@@ -492,11 +552,13 @@
 				AF0C22BD28E5BE2D00CBB79F /* LocationModel.swift in Sources */,
 				AF37CBF328E3453300DF0182 /* MapViewRepresentable.swift in Sources */,
 				AF37CBF128E344B300DF0182 /* HomeView.swift in Sources */,
+				AF8237A529236772007EB3D8 /* GraphQLAPI.swift in Sources */,
 				AF37CBFB28E3530A00DF0182 /* LocationSearchBoxView.swift in Sources */,
 				AF37CBFD28E3538800DF0182 /* Color.swift in Sources */,
 				AF0C22B928E58D8A00CBB79F /* VehicleType.swift in Sources */,
 				AF0C22BB28E5A5EE00CBB79F /* Double.swift in Sources */,
 				AF8F826628E417CF009AC943 /* LocationSearchListView.swift in Sources */,
+				AF8237A729236772007EB3D8 /* CountryGraphQLService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -821,6 +883,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AF82379D2923672B007EB3D8 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = exactVersion;
+				version = 0.51.2;
+			};
+		};
+		AF8237AB29236C1D007EB3D8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AF82379E2923672B007EB3D8 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF82379D2923672B007EB3D8 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		AF8237AC29236C1D007EB3D8 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF8237AB29236C1D007EB3D8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		AF8237AE29236C1D007EB3D8 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF8237AB29236C1D007EB3D8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		AF8237B029236C1D007EB3D8 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF8237AB29236C1D007EB3D8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AF37CBB428E33EE700DF0182 /* Project object */;
 }
