@@ -21,20 +21,17 @@ struct LuxTaxiSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
             ZStack{
+                
                 if Auth.auth().currentUser?.uid != nil {
                    
 
                     HomeView()
                         .environmentObject(locationSearchListViewModel)
                         .environmentObject(launchScreenManager)
-                        .onAppear{
-                            try? Auth.auth().signOut()
-                        }
                 }
                 else {
                     AuthView()
                         .environmentObject(authViewModel)
-                   
                 }
                
                 

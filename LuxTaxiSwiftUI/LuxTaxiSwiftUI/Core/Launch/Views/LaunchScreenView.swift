@@ -101,7 +101,7 @@ struct LaunchScreenView: View {
         }
         .onReceive(timer){input in
             withAnimation(.easeInOut){
-               // screenOpacity = 0
+                screenOpacity = 0
             }
             
         }
