@@ -19,10 +19,7 @@ struct AuthView: View {
     var body: some View {
         
         ZStack{
-            LinearGradient(colors: [.green, .cyan], startPoint: .bottom, endPoint: .top)
-                .opacity(0.7)
-                .ignoresSafeArea()
-
+            backgroundGradient
             // Login Views
             VStack{
                 headerView
@@ -56,6 +53,7 @@ struct AuthView: View {
             }
             
         }
+        .background(backgroundImage)
         .edgesIgnoringSafeArea(.bottom)
            
       
@@ -63,6 +61,26 @@ struct AuthView: View {
 }
 
 extension AuthView {
+    private var backgroundImage : some View {
+            Image("bg-menu")
+                .resizable()
+                .scaledToFill()
+                .blur(radius: 14)
+                .ignoresSafeArea()
+    }
+    private var backgroundGradient : some View {
+        LinearGradient(
+            colors: [
+                Color.theme.goldBackgroundColor,
+                Color.theme.carItemBackgroundColor
+            ],
+            startPoint: .top,
+            endPoint: .bottom)
+        .blur(radius: 92)
+        .opacity(0.58)
+        .ignoresSafeArea()
+    }
+    
     private var headerView: some View {
         ZStack(alignment: .top){
             
@@ -83,7 +101,7 @@ extension AuthView {
                     if vm.loginStep == .otp {
                         
                         Image(systemName: "square.and.pencil")
-                            .foregroundColor(.blue)
+                            .foregroundColor(.white)
                             .fontWeight(.bold)
                             .onTapGesture {
                                 withAnimation(.spring()){
@@ -97,7 +115,8 @@ extension AuthView {
             .padding(.vertical)
             .padding(.bottom, 114)
         }
-        .foregroundColor(Color(.white))
+        .foregroundColor(.white)
+        .shadow(color: .black, radius: 1, x:0, y: 1)
         .padding(.bottom, -107)
     }
     private var phoneNumberView: some View {
@@ -105,7 +124,7 @@ extension AuthView {
             GeometryReader { geo in
                 
                 Wave(waveHeight: 14, phase: Angle(degrees: Double(geo.frame(in: .global).minY) * 0.7))
-                    .foregroundColor(.white)
+                    .foregroundColor(Color.theme.carItemBackgroundColor)
             }
             HStack(alignment: .bottom){
                 VStack(alignment: .leading){
@@ -138,7 +157,7 @@ extension AuthView {
                         .padding(.trailing, 7)
                     
                 }
-                .foregroundColor(Color(.darkGray))
+                .foregroundColor(Color.theme.primaryTextColor)
                 
                 Spacer()
                 
@@ -151,9 +170,9 @@ extension AuthView {
                         .font(.headline)
                 }
                 .frame(width: 80)
-                .foregroundColor(Color(.white))
+                .foregroundColor(.white)
                 .padding()
-                .background(.green)
+                .background(Color.theme.goldBackgroundColor)
                 .cornerRadius(4)
                 
             }
@@ -169,7 +188,7 @@ extension AuthView {
         ZStack{
             GeometryReader { geo in
                 Wave(waveHeight: 14, phase: Angle(degrees: Double(geo.frame(in: .global).minY) * 0.3))
-                    .foregroundColor(.white)
+                    .foregroundColor(Color.theme.carItemBackgroundColor)
             }
             HStack(alignment: .bottom){
                 VStack(alignment: .leading){
@@ -179,6 +198,8 @@ extension AuthView {
                         .foregroundColor(vm.warningOtpText.isEmpty ? .gray : .orange)
                     HStack{
                         Image(systemName: "lock.shield")
+                        Text("CODE")
+                            .opacity(0.29)
                         Text(vm.otpText)
                             .lineLimit(1)
                             .frame(maxWidth: 150, alignment: .leading)
@@ -189,7 +210,7 @@ extension AuthView {
                         .padding(.trailing, 7)
                     
                 }
-                .foregroundColor(Color(.darkGray))
+                .foregroundColor(Color.theme.primaryTextColor)
                 
                 Spacer()
                 
@@ -200,9 +221,9 @@ extension AuthView {
                         .font(.headline)
                 }
                 .frame(width: 80)
-                .foregroundColor(Color(.white))
+                .foregroundColor(.white)
                 .padding()
-                .background(.green)
+                .background(Color.theme.goldBackgroundColor)
                 .cornerRadius(4)
                 
             }
@@ -244,14 +265,14 @@ extension AuthView {
                     }
                 }
                 .fontWeight(.bold)
-                .background(.white.opacity(keyTag.isEmpty ? 0.29 : 1))
+                .background(Color.theme.carItemBackgroundColor.opacity(keyTag.isEmpty ? 0.29 : 1))
                 .cornerRadius(7)
             }
         }
-                    .foregroundColor(Color(.darkText))
+                    .foregroundColor(Color.theme.primaryTextColor)
                     .padding(14)
                     .padding(.bottom)
-                    .background(Color(.systemGroupedBackground))
+                    .background(Color.theme.appBackgroundColor)
     }
     
     struct Wave: Shape {

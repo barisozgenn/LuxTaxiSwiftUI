@@ -49,6 +49,7 @@
 		AFE7C9D8292383E9007479B7 /* CountrySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE7C9D6292383E9007479B7 /* CountrySelectionView.swift */; };
 		AFE7C9DB2923840D007479B7 /* CountrySelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE7C9DA2923840D007479B7 /* CountrySelectionViewModel.swift */; };
 		AFE7C9DD2923845B007479B7 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE7C9DC2923845B007479B7 /* SearchBarView.swift */; };
+		AFE7C9E029238930007479B7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFE7C9DF29238930007479B7 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +76,7 @@
 		AF0C22BE28E5C2B200CBB79F /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		AF0C22C328E5DA4D00CBB79F /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 		AF0C22C528E5F4D800CBB79F /* LaunchScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewModel.swift; sourceTree = "<group>"; };
-		AF0C22C728E5F9A900CBB79F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		AF0C22C728E5F9A900CBB79F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF0C22CB28E6C9B600CBB79F /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		AF0C22CD28E6CC0700CBB79F /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
 		AF1F74D328E4B48F001EA355 /* MapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewState.swift; sourceTree = "<group>"; };
@@ -111,6 +112,7 @@
 		AFE7C9D6292383E9007479B7 /* CountrySelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountrySelectionView.swift; sourceTree = "<group>"; };
 		AFE7C9DA2923840D007479B7 /* CountrySelectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountrySelectionViewModel.swift; sourceTree = "<group>"; };
 		AFE7C9DC2923845B007479B7 /* SearchBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		AFE7C9DF29238930007479B7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,15 +240,14 @@
 		AF37CBBE28E33EE700DF0182 /* LuxTaxiSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				AFE7C9DE29238919007479B7 /* Resources */,
 				AF8237A8292367E0007EB3D8 /* Managers */,
 				AF82379B292366B0007EB3D8 /* Services */,
-				AF0C22C728E5F9A900CBB79F /* Info.plist */,
 				AF37CBEC28E3443500DF0182 /* Utils */,
 				AF37CBEB28E3442800DF0182 /* Extensions */,
 				AF37CBED28E3444200DF0182 /* Models */,
 				AF37CBEA28E3442200DF0182 /* Core */,
 				AF37CBE928E3441000DF0182 /* App */,
-				AF37CBC328E33EE900DF0182 /* Assets.xcassets */,
 				AF37CBC528E33EE900DF0182 /* Preview Content */,
 			);
 			path = LuxTaxiSwiftUI;
@@ -462,6 +463,16 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		AFE7C9DE29238919007479B7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AFE7C9DF29238930007479B7 /* GoogleService-Info.plist */,
+				AF0C22C728E5F9A900CBB79F /* Info.plist */,
+				AF37CBC328E33EE900DF0182 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -578,6 +589,7 @@
 			files = (
 				AF37CBC728E33EE900DF0182 /* Preview Assets.xcassets in Resources */,
 				AF8237A629236772007EB3D8 /* queriesCountry.graphql in Resources */,
+				AFE7C9E029238930007479B7 /* GoogleService-Info.plist in Resources */,
 				AF37CBC428E33EE900DF0182 /* Assets.xcassets in Resources */,
 				AF8237A429236772007EB3D8 /* schemaCountry.graphql in Resources */,
 			);
