@@ -42,6 +42,13 @@
 		AF8F826628E417CF009AC943 /* LocationSearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F826528E417CF009AC943 /* LocationSearchListView.swift */; };
 		AF8F826828E41DFF009AC943 /* LocationSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F826728E41DFF009AC943 /* LocationSearchCell.swift */; };
 		AF8F826A28E4326D009AC943 /* LocationSearchListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F826928E4326D009AC943 /* LocationSearchListViewModel.swift */; };
+		AFE7C9CE292381E8007479B7 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE7C9CD292381E8007479B7 /* AuthView.swift */; };
+		AFE7C9D0292381F7007479B7 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE7C9CF292381F7007479B7 /* AuthViewModel.swift */; };
+		AFE7C9D22923822A007479B7 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE7C9D12923822A007479B7 /* AuthManager.swift */; };
+		AFE7C9D7292383E9007479B7 /* CountrySelectionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE7C9D5292383E9007479B7 /* CountrySelectionCellView.swift */; };
+		AFE7C9D8292383E9007479B7 /* CountrySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE7C9D6292383E9007479B7 /* CountrySelectionView.swift */; };
+		AFE7C9DB2923840D007479B7 /* CountrySelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE7C9DA2923840D007479B7 /* CountrySelectionViewModel.swift */; };
+		AFE7C9DD2923845B007479B7 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE7C9DC2923845B007479B7 /* SearchBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +104,13 @@
 		AF8F826528E417CF009AC943 /* LocationSearchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchListView.swift; sourceTree = "<group>"; };
 		AF8F826728E41DFF009AC943 /* LocationSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchCell.swift; sourceTree = "<group>"; };
 		AF8F826928E4326D009AC943 /* LocationSearchListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchListViewModel.swift; sourceTree = "<group>"; };
+		AFE7C9CD292381E8007479B7 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		AFE7C9CF292381F7007479B7 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		AFE7C9D12923822A007479B7 /* AuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		AFE7C9D5292383E9007479B7 /* CountrySelectionCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountrySelectionCellView.swift; sourceTree = "<group>"; };
+		AFE7C9D6292383E9007479B7 /* CountrySelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountrySelectionView.swift; sourceTree = "<group>"; };
+		AFE7C9DA2923840D007479B7 /* CountrySelectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountrySelectionViewModel.swift; sourceTree = "<group>"; };
+		AFE7C9DC2923845B007479B7 /* SearchBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,11 +288,13 @@
 		AF37CBEA28E3442200DF0182 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				AFE7C9CA292381BE007479B7 /* Auth */,
 				AF0C22C828E6C98A00CBB79F /* Menu */,
 				AF0C22C028E5D64F00CBB79F /* Launch */,
 				AF1F74D528E4BD8E001EA355 /* Trip */,
 				AF37CBF728E3528A00DF0182 /* LocationSearch */,
 				AF37CBF628E34E5200DF0182 /* Home */,
+				AFE7C9D3292383C5007479B7 /* Countries */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -388,9 +404,62 @@
 		AF8237A8292367E0007EB3D8 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				AFE7C9D12923822A007479B7 /* AuthManager.swift */,
 				AF8237A9292367FB007EB3D8 /* GraphQLNetworkManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		AFE7C9CA292381BE007479B7 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				AFE7C9CC292381C9007479B7 /* View */,
+				AFE7C9CB292381C3007479B7 /* ViewModel */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		AFE7C9CB292381C3007479B7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AFE7C9CF292381F7007479B7 /* AuthViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AFE7C9CC292381C9007479B7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AFE7C9CD292381E8007479B7 /* AuthView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AFE7C9D3292383C5007479B7 /* Countries */ = {
+			isa = PBXGroup;
+			children = (
+				AFE7C9D9292383EC007479B7 /* ViewModel */,
+				AFE7C9D4292383D0007479B7 /* Views */,
+			);
+			path = Countries;
+			sourceTree = "<group>";
+		};
+		AFE7C9D4292383D0007479B7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AFE7C9DC2923845B007479B7 /* SearchBarView.swift */,
+				AFE7C9D5292383E9007479B7 /* CountrySelectionCellView.swift */,
+				AFE7C9D6292383E9007479B7 /* CountrySelectionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AFE7C9D9292383EC007479B7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AFE7C9DA2923840D007479B7 /* CountrySelectionViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -535,22 +604,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFE7C9DB2923840D007479B7 /* CountrySelectionViewModel.swift in Sources */,
 				AF37CBF528E347A200DF0182 /* LocationManager.swift in Sources */,
 				AF8F826828E41DFF009AC943 /* LocationSearchCell.swift in Sources */,
 				AF8237AA292367FB007EB3D8 /* GraphQLNetworkManager.swift in Sources */,
 				AF37CBFF28E3551F00DF0182 /* UIApplication.swift in Sources */,
 				AF0C22CE28E6CC0700CBB79F /* SideMenu.swift in Sources */,
+				AFE7C9D8292383E9007479B7 /* CountrySelectionView.swift in Sources */,
 				AF1F74D428E4B48F001EA355 /* MapViewState.swift in Sources */,
+				AFE7C9D7292383E9007479B7 /* CountrySelectionCellView.swift in Sources */,
 				AF8F826A28E4326D009AC943 /* LocationSearchListViewModel.swift in Sources */,
 				AF1F74D928E4BDE6001EA355 /* TripRequestView.swift in Sources */,
 				AF0C22BF28E5C2B200CBB79F /* Date.swift in Sources */,
 				AF0C22CC28E6C9B600CBB79F /* SideMenuView.swift in Sources */,
+				AFE7C9D22923822A007479B7 /* AuthManager.swift in Sources */,
 				AF0C22C428E5DA4D00CBB79F /* LaunchScreenView.swift in Sources */,
 				AF0C22C628E5F4D800CBB79F /* LaunchScreenViewModel.swift in Sources */,
 				AF37CBC028E33EE700DF0182 /* LuxTaxiSwiftUIApp.swift in Sources */,
 				AF8F826428E35A44009AC943 /* MapViewMenuButton.swift in Sources */,
+				AFE7C9DD2923845B007479B7 /* SearchBarView.swift in Sources */,
 				AF0C22BD28E5BE2D00CBB79F /* LocationModel.swift in Sources */,
 				AF37CBF328E3453300DF0182 /* MapViewRepresentable.swift in Sources */,
+				AFE7C9CE292381E8007479B7 /* AuthView.swift in Sources */,
 				AF37CBF128E344B300DF0182 /* HomeView.swift in Sources */,
 				AF8237A529236772007EB3D8 /* GraphQLAPI.swift in Sources */,
 				AF37CBFB28E3530A00DF0182 /* LocationSearchBoxView.swift in Sources */,
@@ -558,6 +633,7 @@
 				AF0C22B928E58D8A00CBB79F /* VehicleType.swift in Sources */,
 				AF0C22BB28E5A5EE00CBB79F /* Double.swift in Sources */,
 				AF8F826628E417CF009AC943 /* LocationSearchListView.swift in Sources */,
+				AFE7C9D0292381F7007479B7 /* AuthViewModel.swift in Sources */,
 				AF8237A729236772007EB3D8 /* CountryGraphQLService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
