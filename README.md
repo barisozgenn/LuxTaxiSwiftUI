@@ -2,7 +2,7 @@
 
 Uber-like app built with SwiftUI following the MVVM architectural pattern for iOS 16.
 
-<a target="_blank" href="https://www.youtube.com/watch?v=9_I8zN2w6qc" title="swiftui-luxtaxi-uber-clone-barisozgen">
+<a target="_blank" href="https://www.youtube.com/watch?v=woIrRnctOY0" title="swiftui-luxtaxi-uber-clone-barisozgen">
 Watch on YouTube<br>
  <img src="https://repository-images.githubusercontent.com/541990690/3284ebaa-c45c-4b19-b06b-a6ddf6a1a3b9" width="392" alt="LuxTaxiSwiftUI">
 </a>
